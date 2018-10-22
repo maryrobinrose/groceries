@@ -6,8 +6,3 @@ All previous objectives have been met.
 Project is broken down into "plain English" specs, listed in README.
 Project is in a presentable, portfolio-quality state.
 You are able to discuss the flow of your code and the concepts behind it with an instructor using correct terminology.
-
-
-var thirdItem = $("input#itemThree").val();
-var fourthItem = $("input#itmeFour").val();
-var fifthItem = $("input#itemFive").val();

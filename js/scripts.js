@@ -8,7 +8,7 @@ $(document).ready(function() {
     // var fourthItem = $("input#itemFour").val();
     // var fifthItem = $("input#itemFive").val();
 
-    var items = ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive"];
+    // var items = ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive"];
 
     // var groceryItems = [firstItem, secondItem, thirdItem, fourthItem, fifthItem];
 
@@ -22,10 +22,32 @@ $(document).ready(function() {
     // $("#second").text(firstThreeItems[1]);
     // $("#third").text(firstThreeItems[2]);
 
-    items.forEach(function(item) {
-      var userInput = $("input#" + item).val();
-      $("#groceryList").append("<li>" + userInput + "</li>");
+    // items.forEach(function(item) {
+    //   var userInput = $("input#" + item).val();
+    //
+    //   $("#groceryList").append("<li>" + userInput + "</li>");
+    //
+    // });
+
+    var items = ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive"];
+
+    var inputs = items.map(function(item) {
+      return $("input#" + item).val();
     });
+      inputs.sort();
+
+    var capitalizedItems = inputs.map(function(input) {
+      return input.toUpperCase();
+    });
+
+    capitalizedItems.forEach(function(capitalizedItem) {
+      $("#groceryList").append("<li>" + capitalizedItem + "</li>");
+    });
+
+
+      $("form#list").addClass("hide");
+
+
 
   });
 });

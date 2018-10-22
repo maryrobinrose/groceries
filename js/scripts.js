@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  alert("Hello");
   $("form#list").submit(function(event) {
     event.preventDefault();
 
@@ -9,5 +8,15 @@ $(document).ready(function() {
     var fourthItem = $("input#itemFour").val();
     var fifthItem = $("input#itemFive").val();
 
+    var groceryItems = [firstItem, secondItem, thirdItem, fourthItem, fifthItem];
+
+    var firstThreeItems = [];
+    firstThreeItems.push(groceryItems[0]);
+    firstThreeItems.push(groceryItems[1]);
+    firstThreeItems.push(groceryItems[2]);
+
+    $("#first").text(firstThreeItems[0]);
+    $("#second").text(firstThreeItems[1]);
+    $("#third").text(firstThreeItems[2]);
   });
 });
